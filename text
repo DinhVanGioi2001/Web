@@ -1,0 +1,210 @@
+-tao file index.html
+-web sever: ưu tiên các file có tên là index
++cau truc html:
+	+gom cac the <ten the> 
+	+ Co 2 loai the
+		+The mo <ten the>
+		+The dong</ten the>
+	+Xuong dong va dau cach tuong duong nhau
++cac loai html co ban
+	+2 loai the
+		+the noi dung:
+			khi viet vao hien noi dung len trang web
+			bao gom cac the:
+				+ p
+				+ h
+				+ img
+				+ a
+				+ li
+				+ input
+				+ select
+				+ button
+		+the bao:
+			dung de bao boc cac trang web
+			bao gom cac the:
+				+ div
+				+ header
+				+ footer
+				+ sidebar
+				+ span
+				+ ul
+				+ ol
++ p: paragraph : the van ban
++h: heading : h1 -> h6
++img: image : hinh anh ; khong co </..> vi la the don
+	+src: source : nguon anh
++ a: the lien ket
+	+ href: duong dan lien ket
++ ul: un-order list: danh sach khong sap xep; phai co <li> ben trong va se hien dau cham(.)
++ ol: order list: danh sach sap xep; co <li> ben trong va hien so 1, 2 , 3
++ li: list item: muc danh sach
+*********
++ The dang FORM: the de nguoi dung go noi dung vao
+	+ input: cho phep nguoi dung nhap du lieu
+	+ cu phap <input type="noi dung" />
+		+ text
+		+ button
+		+ password
+		+ checkbox
+		+ radio
+	+ the select: cho phep tro xuong de chon
+		+ option
+	+ label: nhấn
++ The div: xac dinh 1 vung trang web va chi dung de khoanh vung
++ header:giong nhu div: xac dinh 1 vung tren web => phan dau cua trang web
++ footer: phan chan
++ sidebar:phan sidebar
++ span: dung de dinh dang mau :xet ve ngu nghia thi khong co tac dung trong cau van
++ the sup: dung de ghi so mu vd 3^2
++ br: break: the xuong dong
+	+ <br/>
+
+web developer tools
+
+==============================
+box model:
+	+la mot mo hinh cua element: mo hinh hop
+	+ Mo hinh hop
+		+ tat ca cac thanh phan (element) tren trang web deu co mo hinh chung: hinh hop chu nhat
+		+ cau tao hinh chu nhat
+			+ margin: la khoang cach voi cac element xung quanh
+				+ margin-left
+				+ margin-right
+				+ margin-top
+				+ margin-bottom
+			+ border: duong vien cua element
+				+ border-left
+				+ border-right
+				+ border-top
+				+ border-bottom
+			+ padding: la khoang cach giua cac duong vien voi cac thanh phan con ben trong
+				+ padding-left
+				+ padding-right
+				+ padding-top
+				+ padding-bottom
+			+ width: chieu rong
+			+ height: chieu cao
+
++ Mac dinh: khoang khong gian chiem cho cua element = tong margin + border + padding + width
+
++ selector: cach de css chon ra mot hoac nhieu element
+	+ chon theo the
+		+ ten the <dau cach> {...}
+	+ chon theo id: 
+		+ id (indetifier) la mot thuoc tinh cua bat ki mot the nao
+		+ dinh nghia bang dau #
+		+ id chi co mot khong duoc dat chung voi bat ki cai gi khac
+	+ chon theo class:
+		+ cung giong nhu id
+		+ class: dung cho nhieu cai (Khác với id dùng cho 1 cái)
+		+ dung dau cham (.)
+	+ chon thanh phan nằm trong: dung dau cach 
+		+ VD: #menu li {...} truy cap cac thanh phan con trong the <li>
+	+ chon thanh phan con truc tiep: su dung dau " > "
+	+ chon theo nhieu dieu kien: viet cac dieu kien gan nhau
+	+ chon nhieu element: dung dau phay:
+		+ vd: li, p {   }
+	+ chon theo thu tu:
+		+ first-child: thanh phan dau tien
+		+ last-child: thanh phan cuoi cung
+		+ nth-child: thanh phan so may? 
+		+ odd: so chan
+		+ even: so le
+		+ su dung tham so n (n tang dan tu 0 cho den vo cung)
+	+ chon theo thuoc tinh
+		+ su dung dau [thuoc tinh=gia tri]
+		+ vd: [type=text] {  }
+	+ chon mot thanh phan tiep theo: dung dau: + va tiep sau do la selector
+	+ chon nhieu thanh phan tiep theo (tat ca cac thanh phan phia sau): dung dau ~ và tiep sau do la selector
+	+ wildcat selector: *: tat ca
+	+ :not(): khong phai
+
+================================
+5 thuoc tinh quan trong nhat cua css
++ la thuoc tinh anh huong den kich thuoc cua element
++ width: chieu rong cua element
+	+ gia tri px
+	+ gia tri % cua element cha
+		+ position: fixed => % cua body
++ height: chieu cao cua element
+	+ tu dong dai ra theo noi dung ben trong
+	+ gia tri px hoac %
++ padding: padding cua element
+	+ khoang cach giua duong vien den noi dung
+	+ gia tri: px, %
+	+ padding-left
+	+ padding-right
+	+ padding-top
+	+ padding-bottom
+	+ chi viet: padding
+		+ 1 gia tri: tren, duoi, trai, phai
+		+ 2 gia tri: vd như 30px, 15px nghia la tren duoi 30 va trai phai 15
+		+ 4 gia tri: tren, phai, duoi, trai
++ border: duong vien
+	+ cach viet tat:
+		border: [do day] [kieu] [mau]
+		+ kieu:
+			+ solid: net lien
+			+ dotted: net cham cham
+			+ dashed: net gach
+		+ border-left: [do day] [kieu] [mau]
+		+ border-right: [do day] [kieu] [mau]
+		+ border-top: [do day] [kieu] [mau]
+		+ border-bottom: [do day] [kieu] [mau]
+	+ border-width: [do day]
+		+border-left-width: do day duong vien trai
+		+border-right-width: do day duong vien phai
+		+ border-top-width: do day duong vien tren
+		+border-bottom-width: do day duong vien duoi
+	+ border-style: kieu duong vien
+		+ border-left-style: kieu duong vien trai
+		+ border-right-style: kieu duong vien phai
+		+ border-top-style: kieu duong vien tren
+		+ border-bottom-style: kieu duong vien duoi
+	+ border-color: mau duong vien
+		+ border-left-color: mau duong vien ben trai
+		+ border-right-color: mau duong vien phai
+		+ border-top-color: mau duong vien tren
+		+ border-bottom-color: mau duong vien duoi
++ margin: la khoang cach voi cac thanh phan xung quanh
+	+ giong padding
++ box-sizzing: quy dinh cach ma trinh duyet tinh toan kich thuoc cua element
+	+ mac dinh: 
+		content-box => rong = border + padding + width
+		border-box => rong - width
++ margin, padding, width, height, box-sizzing, border
++ block va inline:
+	+ tat ca cac the html chia thanh 2 loai
+		+ block element
+			+ la element mac dinh rong 100%
+			+ nam tren mot hang rieng
+			+ block element dung de chua cac block hoac inline element khac
+			+div, h1-6, ul, ol, li, header, footer, sidebar, p
+			+ co the xac dinh width va height cho no
+		+ inline element
+			+ la element mac dinh rong bang noi dung
+			+ nam tren cung mot hang
+			+ chi chua duoc inline element 
+			+ a, span, label, input, button, select
+			+ rieng the img: co trinh duyet hieu la block va co trinh duyet hieu la inline
+			+ khong the xac dinh width va height
++ thuoc tinh display:
+	+ block
+	+ inline
+	+ inline-block:  hien thi 1 dong nhu inline, nhung co the dat width va height cho no
+
+
+HTML Table
+
++ td table data
++ tr table row
++ th table heading
+
+
+
+** Float-clear
+
++ tat ca cac thanh phan trong trang web deu co xu huong chay len phia tren, neu la thanh phan inline: chay sang ben trai
+
+Float:
+	+ la mot thuoc tinh dinh nghia cho element troi ve phia nao
