@@ -9,25 +9,23 @@
 	height: 200px;
 	background: red;
 	text-align: center;
+	float: left;
 }
 #menu {
 	width: 100%;
 	height: 150px;
 	background: blue;
 	text-align: center;
+	float: left;
 }
 
 #left-column {
-	width: 30%;
-	height: 500px;
-	float: left;
-	background: yellow;
-	text-align: center;
+	display: none;
 }
 #right-column {
-	width: 70%;
+	width: 100%;
 	height: 500px;
-	float: right;
+	float: left;
 	background: red;
 	text-align: center;
 }
@@ -36,4 +34,5 @@
 	height: 200px;
 	background: blue;
 	text-align: center;
+	float: left;
 }

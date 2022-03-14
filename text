@@ -200,6 +200,13 @@ HTML Table
 + tr table row
 + th table heading
 
+form :
++ placeholder
+
+inline 
+internal
+external
+
 
 
 ** Float-clear
@@ -208,3 +215,37 @@ HTML Table
 
 Float:
 	+ la mot thuoc tinh dinh nghia cho element troi ve phia nao
+	+ Khi float: lam the nao de khong bi xuong dong
+		+ đặt %
+		+ su dung fix 1 ben
+
+basic layout:
+	+ 2 cột
+	+ 3 cột
+
+Clear:
+	Xoa su anh hưởng của float của thành phần phía trước
+	+ left
+	+ right
+	+ both: cả 2
+
++ khi 1 thanh phan con mà float => thành phần cha không thẻ tính toán được chiều cao
+
++ reset css: 
+	mỗi trình duyệt có thuộc tính mặc định khác nhau
+
++ Flex: flex box
++ Khong chac chan chay duoc tren 100% trinh duyet
++ Flex la mo hinh dan trang pho bien tren mobile app, android, ios
++ js, vue(react) => react native(mobile)
+
++ de su dung flex: display: flex cho thanh phan cha
++ flex-grow: 
+	+ dinh nghia viec lon len cua flex item
+	+ la ti le phân chia phần thừa còn lại của cha
+
++ flex-shrink:
+	+ nguoc lại với flex grow
+	+ la ti le phan chia phan thieu
+	+ vd: tỷ lệ 1 4 1 mà width tổng = 500 thì khi bị co lại cũng sẽ bị co theo tỉ lệ 1 4 1
+
