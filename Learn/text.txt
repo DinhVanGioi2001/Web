@@ -242,10 +242,40 @@ Clear:
 + de su dung flex: display: flex cho thanh phan cha
 + flex-grow: 
 	+ dinh nghia viec lon len cua flex item
-	+ la ti le phân chia phần thừa còn lại của cha
+	+ la ti le phân chia phần thừa còn lại của cha 
+	+ theo truc main
 
 + flex-shrink:
 	+ nguoc lại với flex grow
-	+ la ti le phan chia phan thieu
+	+ la ti le phan chia phan thieu 
+	+ theo truc main
 	+ vd: tỷ lệ 1 4 1 mà width tổng = 500 thì khi bị co lại cũng sẽ bị co theo tỉ lệ 1 4 1
 
++ justtify-content 
+	+ Sap xep cac item theo truc main (trục ngang)
+	+ flex-start
+	+ flex-end
+	+ center
+	+ space-beetween
+	+ space-around
+
++ align-items
+	+ sap xep cac item theo truc cross (trục dọc)
+	+ flex-start
+	+ flex-end
+	+ center
+
++ flex-basis:
+	+ la kich thuoc cua item theo truc main
+	+ la width khi truc main nam ngang
+	+ la height khi truc main nam doc
+
++ flex-wrap
+
++ font: 
+	+ Hieu ve font chu
+	+ font chu: la mot bo hinh anh cac chu cai
+	+ go chu tren may tinh: xep cac hinh anh ke nhau
+	+ window: C:/windows/fonts
+	+ linux: /usr/share/fonts
+	+ duoi: file font:ttf, eof
