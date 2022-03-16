@@ -166,6 +166,8 @@ box model:
 		+ border-right-color: mau duong vien phai
 		+ border-top-color: mau duong vien tren
 		+ border-bottom-color: mau duong vien duoi
+
+	+ border-darius: bo góc của ô vuông lại
 + margin: la khoang cach voi cac thanh phan xung quanh
 	+ giong padding
 + box-sizzing: quy dinh cach ma trinh duyet tinh toan kich thuoc cua element
@@ -270,7 +272,7 @@ Clear:
 	+ la width khi truc main nam ngang
 	+ la height khi truc main nam doc
 
-+ flex-wrap
++ flex-wrap: tự động chia sao cho vừa chiều cao hoặc chiều rộng
 
 + font: 
 	+ Hieu ve font chu
@@ -279,3 +281,92 @@ Clear:
 	+ window: C:/windows/fonts
 	+ linux: /usr/share/fonts
 	+ duoi: file font:ttf, eof
+	+ font-size: 
+	+ line: dòng chữ xếp sát nhau
+	+ line-height: do cao cua dong chu, cac chu cai thi duoc can vao giua dong theo chieu doc
+	+ tao cac menu: the a: line height = height
+	+ Trick:
+		+ Khi dat height = line-height thi text se can giua theo chieu doc
+	+ letter-spacing: khoang cach giua cac chu cai
+	+ word-spacing: khong cach giữa các từ
+	+ word-break: gồm 2 thuộc tính là
+		+ break-all: cắt xuống dòng 
+		+ keep-all: không xuống dòng mà kéo dài ra
+
+	+ font-family: địh nghĩa các font
+		+ dau phân cách các font bằng dấu ngoặc kép
+		+ các ten font co dau cach: Nháy
+		+ sans-serif: font mặc định (nếu các font trước không có thì sẽ lấy font sans-serif)
+		+ @font-face: định nghĩa ra 1 font
+	+ có 2 loại font
+		+ font có sẵn: font có sẵn trên máy người dùng
+			+ không phải tải thêm
+			+ tốc độ nhanh
+			+ nhuoc diểm: trên máy người dùng chưa chắc có font sans-serif
+		+ web font:
+			+ la những font nhúng ở trên trang web, khi người dùng xem trang web thì trang web sẽ tải về
+		
+		+ icon font:
+** Khi nào danh sách hoặc menu thì cho vào list(đánh số hoặc đánh dấu được)
+
+
++ position: chi định vị trí của các element
+	+ fixed: nằm chính xác tuyệt đối với body
+		+ phải đặt vị trí top và left, right, bottom cho nó
+		+ nằm lên phía trên của các element khác
+		+ chiều rộng của element phụ thuộc vào nội dung bên trong của element đó
+
+	+ sticky: nằm bình thường với các element khác, nếu scroll chuột lên thì nó sẽ không thể cuộn được nữa
+	+ Mặc định: static
+	+ relative: 
+		+ vị trí liên quan
+	+ absolute: 
+		+ vị trí tuyệt đối so với thành phần chứa nó có position là relative
+	+ cap relative + absolute
+
++ background:
+	+ nen
+	+ background-color: mau nen
+	+ background-imge: url() hinh nen
+	+ background-repeat: lap lai
+		+ no-repeat: Khong lap
+		+ repeat: lap
+		+ repeat-x: lap ngang
+		+ repeat-y: lap doc
+	+ background-position:
+		+ vi tri cua hinh nen
+		+ left px top px 
+		+ left/right/center top/bottom/center
+	+ background-size: 
+		+ kích thước của ảnh nền
+		+ cover: zoom cho vừa đủ 2 chiều của element
+		+ contain: zoom sao cho full 1 chiều của element
+		+ auto: mặc định
+		+ kích thước rộng - kích thước cao
+	+ background-attachment:
+		+ fixed: khi element scroll => đứng im theo body
+		+ scroll: khi element scroll => kéo theo body
+		+ local: scroll theo element hiện tại
+	+ cách viết tắt:
+		+ background: [mau]->[anh nen]->repeat->position
+
++ State:
+	+ Cac element tren trang web dev co state
+		+ hover: khi nguoi dung di chuyen chuot len element thi se doi mau theo hover
+		+ active: hien thi mau khi nhan chuot vao
+		+ visited: link ban da xem(the a)
+		+ link: trang thai ban dau(the a)
+		+ focus: element hien tai
+
++ Dropdown menu (Dạng di chuyển chuột tới sẽ hiện ra menu)
+	+ cap the huyen thoai: relative + absolute
+
++ Pseudo-element:
+	+ cung la element nhu cac the khac
+	+ Do css them vao
+	+ co 2 pseudo 
+		+ before
+		+ after
+
++ float + clear: 
+	+ clear-fix: 

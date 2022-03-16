@@ -1,6 +1,48 @@
 * {
 	box-sizing: border-box;
-	padding: 0;
 	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
+#menu {
+	background: black;
+	width: 300px;
+}
+
+#menu >li {
+	height: 50px;
+	position: relative;
+}
+
+#menu > li > a:hover {
+	background: #9b9595;
+}
+
+#menu > li ul {
+	display: none;
+	
+}
+
+#menu > li > a {
+	text-decoration: none;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color: white;
+	padding: 0px 25px;
+
+}
+
+#menu > li > ul > li > a {
+	text-decoration: none;
+}
+
+#menu li:hover > ul {
+	display: block;
+	position: absolute;
+	background: rgb(196, 94, 94);
+	top: 0%;
+	left: 100%;
+	width: 100%;
+}	

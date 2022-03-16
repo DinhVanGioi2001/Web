@@ -1,38 +1,27 @@
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	padding: 0px;
+	margin: 0px;
 }
 
-#header {
-	width: 100%;
-	height: 200px;
-	background: red;
-	text-align: center;
-	float: left;
-}
-#menu {
-	width: 100%;
-	height: 150px;
-	background: blue;
-	text-align: center;
-	float: left;
+#box {
+	border: 1px solid black;
+	width: 500px;
+	margin: 10px auto;
 }
 
-#left-column {
-	display: none;
+#sidebar {
+	float: right;
+	width: 50px;
 }
-#right-column {
-	width: 100%;
-	height: 500px;
+
+#content {
 	float: left;
-	background: red;
-	text-align: center;
+	width: calc(100%-50px);
 }
-#footer {
-	width: 100%;
-	height: 200px;
-	background: blue;
-	text-align: center;
-	float: left;
+
+.clear::after {
+	content: "";
+	clear: both;
+	display: table;
 }

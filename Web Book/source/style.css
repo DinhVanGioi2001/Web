@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#logo {
+    text-align: center;
+    width: 400px;
+    background: gainsboro;
+    height: 100%;
+    margin: 10px auto;
+    display: block;
+}
+ 
+img {
+    vertical-align: middle;
+}
