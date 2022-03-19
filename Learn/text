@@ -370,3 +370,223 @@ Clear:
 
 + float + clear: 
 	+ clear-fix: 
+
+:nbsb: kí tự đặc biệt cho phép gõ khoảng trắng phía trước
+
++text-align: anh huong toi text va tat ca cac inline element tren trang web
+	+ right: đưa văn bản về phải
+	+ left: đưa văn bản về trái
+	+ justify: đưa văn bản đều 2 bên
++ text-decoration:
+	+ none: bỏ gạch chân
+	+ line=through: gạch ngang chữ
+	+ underline: gạch dưới
++ text-indent: canh lề cho đoạn văn (ẩn hoặc cách lề)
++overflow: nội dung bên trong bị tràn ra ngoài
+	+ scroll: phần tràn được cắt vớt và thêm thanh cuộn
+	+ visible: mặc định và nội dung sẽ tràn ra ngoài
+	+ hidden: phần tràn sẽ bị cắt và nội dung bị ẩn đi
+	+ auto: tự động thêm thanh cuộn khi có nội dung tràn
+	+ overflow-x: tràn theo trục x là chiều ngang
+	+ overflow-y: tràn theo trục y là chiều cao
+
++ opacity: độ trong suốt của màn hình
+	+ giá trị từ 0-1
+	+ làm mờ từ background và cả text
+
++ color: màu chữ
+	+ màu trong web:
+		+ tiếng anh: red, green, blue...
+	+ mã màu RGB(red, green, blue): #6 chữ số hoặc chữ cái
+	+ mau RGBA(red, green, blue, anpha(màu trong suốt)):
+
++ list-style: kiểu của list
++ boder-collapse: collapse -> gop het boder + margin cua cac cot va hang lai voi nhau
+
++ shadow:
+	+ box-shadow: bong do cua box
+	+ text-shadow: bong do cua text 
+		+ []px [px] [px] mau: trai/phai, tren/duoi, độ mờ, màu sắc
+	
+switch box: dung nhung element co ban de tao ra
+
++ media query: 
+	- css selector theo thiet bi
+	+ thiết kế web reponsive
+	+ break point (điểm phá vỡ)
+
+	+ man hinh > 1500px
+	+ man hinh rat lon > 1200px
+	+ man hinh desktop: 960px
+	+ man hinh medium mobile: 786px
+	+ man hinh rat nho: < 500px
+
+co 2 cach viet:
+	+ tang dang - mobile first
+
+@media [loai man hinh]
+
++ hinh anh tren trang web
+
+*** responsive:
++ bản thiết kế
+	+ desktop
+	+ tablet
+	+ mobile
+
+**** javascript
+	-console.log(thong_tin);
+
+- javascript hoạt động thế nào?
+	+ js engine
+	+ đối tượng window: 
+		+tất cả mọi code js nằm trong đối tượng window
+	+ đối tượng document:
+		+ nằm trong window
+		+ là đối tượng đại diện cho tài liệu html hiện tại
+	+ biến: 
+		+ là 1 vùng bộ nhớ để lưu trữ dữ liệu, biến thì có tên
+		+ cách khai báo biến: 
+			+ var [tên biến] = [giá trị của biến];
+			+ let [tên biến] = [giá trị của biến]; (es6)
+
+
++ Mỗi thẻ html = 1 biến ở bên dưới Js
++ viết html => tạo ra các biến
++ viết css: thay đổi thuộc tính của các biến	
+
+các kiểu của biến
+	+ chuỗi: String: là một tập hợp các kí tự trong ngoặc
+	+ number
+
++ hiện kiểu sử dụng typeof
+
+
+Cách thao tác với biến trong js:
+	+ các thao tác xử lý chuỗi
+		+ lấy ra số lượng kí tự: .length
+		+ nối chuỗi: sử dụng toán tử +
+		+ viết hoa: toUpperCase()
+		+ viết thường: toLowerCase()
+		+ Hàm cắt chuỗi: substring(start, end)
+		+ hàm cắt chuỗi theo vị trí và chiều dài: substr(start, length
+		+ hàm cắt 
+		+ thay thế chuỗi: replace(chuỗi thay, chuỗi cần thay)
+		+ hàm phân tách chuỗi: split(" ")
+		+ hàm xóa khoảng trống 2 bên: trim()
+		+ tìm vị trí của phần tử: indexOf()
+		+ tìm vị trí cuối cùng: lastIndexOf()
+		+ lấy kí tự tại vị trí thứ?: charAt()
+
++ các thao tác xử lý với number: 
+	+ cộng, trừ, nhân, chia
+
++ hàm trong js: 
+	function()
+	+ hàm là 1 đoạn code, thực hiện 1 công việc nào đó
+	+ hàm có thể gọi nhiều lần
+	+ hàm có thể nhận các tham số(biến đầu vào)
+		+ vd: function(name, age) {}
+	
+	+ tham số mặc điịnh: 
+		+ không phải trình duyệt nào cũng nhận
+	+ trả về return: 
+		+ chương trình sẽ trả về giá trị ngay và luôn
+	+ hàm mũi tên(arrow function):
+		+ nếu chỉ có 1 tham số: không cần dấu ngoặc tròn
+	 	+ không hỗ trợ các trình duyệt cũ
+
++ các thao tác với array:
+	+ sort()
+	+ reverse()
+ 	+ reduce()
+ 	+ map()
+ 	+ forEach()
+  	+ every()
+  	+ fileter()
+
+Js ARRAY
+	+ lay ra 1 phan tu cua array: a[index]
+	+ lay ra so phan tu cua array: length
+	+ Xoa phan tu cuoi cung: pop()
+		+ la ham tra ve phan tu cuoi cung:
+			+ vd: a = a1.pop() (ở đây a lấy giá trị cuối cùng của a1)
+	+ xoa phan tu o dau mang: shift()
+	+ Đẩy phân tử vao cuoi mang: push()
+		+ a = a1.push(): trả về số lượng phần tử của mảng
+	+ them 1 phan tu vao dau mang: unshift()
+	+ xoa phan tu trong mang: splice()
+		+ splice(vi_tri, so_luong_xoa)
+	+ join(): cong cac phan tu lai
+			+ join(ky_ty)
+	+ sap xep: sort()
+	+ ham dao nguoc: reverse()
+
++ foreach(function): lap qua tat ca cac phan tu cua mang
+	+ khong tra ve
+
++ map: ban do
+	+ sao chep cua thuc te + xu ly them tu nguoi dung
+	+ cu phap: var [bien] = array.map(function(){ xu_ly => return;});
+
++ filter(): sao chep co chon loc
+	+ cach chon: neu tra ve true: thi chon
+	+ neu tra ve false thi khong chon
+
++ reduce(function(), start_value): 
+	+ Nhận vào 1 mảng và tính toán thành giá trị duy nhất
+	+ 
+
+
++ every(): kiểm tra toàn bộ mảng và trả về true/false
+	+ true: khi tất cả đều true
+	+ false: khi 1 trong các phần tử false
+
++ loop và DOM: 
+
++ js DOM:
+	+ DOM: document object model
+		+ tat ca moi thu trong html, css => deu la cac object javascript
+
++ Các phương thức và thuộc tính:
+	+ doi tượng document:
+		+ bắt đầu bằng document.(method or thuộc tính)
+		+ Phương thức (method, hàm, function)
+			+ Method: tìm 1 phần tử html
+				+ document.getElementById(): Lấy 1 thẻ html có sẵn vào 1 biến
+				+ document.getElementsByClassName(): lấy 1 phần tử bởi lớp
+				+ document.getElementsByTagName():  lấy 1 phần tử bở thẻ
+
+			+ Property: thay đổi phần tử
+				+	element.style.property
+				+ element.innerHTML
+				+ element.attibute
+			+ method: thay đổi
+				+ element.setAttribute(attribute, value): thay đổi thuộc tính giá trị của 1 phần tử HTMl
+			+ thêm và xóa phần tử: (document.method)
+				+ createElement(element): tạo 1 phần tử html
+				+ removeChild(element): xóa 1 phần tử html
+				+ appendChild(element): thêm 1 phần tử html
+				+ replacechild(new, old): thay thế 1 phần tử html
+				+ write(text): ghi vào luồng đầu ra html
+
+			+ add event
+				+ getElementById(id).onclick: thêm 1 sự kiện khi bấm click
+
+			+ querySelector(): dùng css để tìm, chỉ trả về 1
+			+ querySelectorAll(): Dùng css để tìm, trả về được nhiều
+
+			+ Thuộc tính;
+				+ innerHTML: nội dung bên trong của 1 thẻ
+				style
++ event:
+	+ tat ca cac element tren html deu co cac event: 
+		+ click: xay ra su kien khi nguoi dung click
+		+ onmousedown: su kien xay ra khi nguoi dung nhan click chuot
+		+ onmouseup: khi nguoi dung bo click chuot thi se chay den ban dau
+		+ onmouseover: kich hoat chuc nang khi nguoi dung di chuyen qua
+		+ onmouseout: kich hoat 1 chuc nang khi nguoi dung khong di chuyen qua
+
+	+ addEventListener(): thêm trình xử lý sự kiện khi người dùng nhấp vào nút
+	+ removeEventListener(): loại bỏ trình nghe sự kiện addEven
+		+ cú pháp: element.addEventListener()
