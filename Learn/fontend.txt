@@ -573,8 +573,8 @@ Js ARRAY
 			+ add event
 				+ getElementById(id).onclick: thêm 1 sự kiện khi bấm click
 
-			+ querySelector(): dùng css để tìm, chỉ trả về 1
-			+ querySelectorAll(): Dùng css để tìm, trả về được nhiều
+			+ querySelector(): dùng css để tìm, chỉ trả về 1 phan tu con dau tien
+			+ querySelectorAll(): Dùng css để tìm, trả về được nhiều phan tu con ben trong
 
 			+ Thuộc tính;
 				+ innerHTML: nội dung bên trong của 1 thẻ
@@ -590,3 +590,77 @@ Js ARRAY
 	+ addEventListener(): thêm trình xử lý sự kiện khi người dùng nhấp vào nút
 	+ removeEventListener(): loại bỏ trình nghe sự kiện addEven
 		+ cú pháp: element.addEventListener()
+
+
+***** lập trình hướng đối tượng:
+	+ đối tượng (Object): là bất kì một đối tượng, một thực thể trong cuộc sống
+	+ class (lớp): định nghĩa
+		+ bên trong: 
+			+ function, method,...
+			+ biến: property: thuộc tính
+			+ constructor: 
+				+hàm khởi tạo và luôn chạy trước tất cả các hàm khác
+				+ các tham số của constructor luôn khởi tạo khi một đối tượng được tạo ra
+				+ chạy các hàm khỏi tạo
+				+ là nơi chứa các property
+	+ instance: thực thể: là 1 thể hiện của class
+		+ tao instance bang tu khóa new
+		+ một class có thể tạo nhiều instace
+
+	+ singleton trong js:
+		+ không có constructor()
+		+ vd: var meo = {} la 1 singleton
+
+	+ tất cả mọi thứ trong js đều là object
+		+ function là 1 object
+		+ array là 1 object
+		+ string là 1 object
+	+ this:
+		+ là object hiện tại
+		+ chỉ được viết ở trong đối tượng
+	+ kế thừa:
+		+ class con kế thừa từ class cha
+		+ class con có hết thuộc tính và phương thức của class cha
+		+ super(): gọi constructor của class cha
+	+ riêng trong js:
+		+ prototype: 
+			+ là một thuộc tính
+			+ có tên là __proto__
+			+ chứa các hàm có sẵn của js
+			+ giấu các hàm có sẵn tránh bị thay đổi
+			+ các hàm có sẵn phụ thuộc vào kiểu của biến
+	+ lập trình hướng đối tượng:
+		+ không phụ thuộc ngôn ngữ nào
+		+ 
+			
+*** callback, promise:
++ xu ly dong bo:
+	+ Dong bo
+		+ code chay tu tren xuong duoi
+	+ Bất đồng bộ
+		+ chạy đến dòng 3 => cho load ảnh xuong
+		+ chay dong 4
+
+Callback:
+	+ callback hell: dia nguc callback
+		=> promise: loi hua
+			+ la 1 object co san trong js
+		=> chuyen de xu ly bat dong bo:
+		=> co 2 tham so constructor: resolve va reject
+	+ .them(function(){
+
+	})
+		+ chinh la resolve
+	+ .catch(function() {})
+		+ chinh la reject
++ promise.all()
+	=> resolve khi toàn bộ các promise con resolve
+	+ thành công khi toàn bộ promise con thành công
+	+ không đảm bảo thứ tự
+
++ promise.any():
+	+ thành công khi có ít nhất 1 promise con thành công
+	+ nhận vào một mảng
+
+async và await:
+	+ 

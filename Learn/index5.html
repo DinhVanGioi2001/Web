@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>validate</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style5.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="">
+        Tên 
+        <input type="text" id="ten">
+        <span id="loi_ten"></span>
+        <br>
+        Ngày sinh
+        <input type="date" id="ngay_sinh">
+        <br>
+        Giới tính
+        <input type="radio" name="gioi_tinh">Nam
+        <input type="radio" name="gioi_tinh">Nu
+        <br>
+        Email
+        <input type="email" id="email">
+        <br>
+        Mật khẩu
+        <input type="password" id="mat_khau">
+        Lớp
+        <select>
+            <option value="">Lập trình</option>
+            <option value="">Bảo mật</option>
+        </select>
+        <br>
+        <button type="button" onclick="kiem_tra()">Đăng ký</button>
+    </form>
+</body>
+<script src="script.js"></script>
+</html>

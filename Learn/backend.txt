@@ -1,0 +1,80 @@
++ PHP:
+    - mỗi thẻ php _ bắt đầu thẻ mở php: <?php
+    - thẻ đống : ?>
+    = xuất ra màn hình: echo 'hello world'
+    - echo: là 1 hàm
+    - Chuỗi trong php: dấu nháy đơn và nháy đôi khác nhau
+        + dấu nháy đôi: chậm hơn dấu nháy đơn
+    - Biến trong php:
+        + Khai báo biến
+            + $[tên biến] = 'value'
+            + chuỗi 
+                + nháy đơn => không có biến bên trong  
+                + nháy đôi => có thể có biến bên trong => cần thay thế biến
+        + Xuống dòng:
+            + ký tự xuống dòng '\n'
+        + Số:
+            + integer: số nguyên (cả số âm)
+            + unsigned integer: số nguyên không âm
+            + float: số thực
+            + boolean: true/false
+        + Array:
+            + print_r, var_dump
+            + php 5: array()
+            + php 7: array[]
+        + Object
+            + class
+            + extends
+            + interface
+            + trait
+            + 3 cấp độ truy cập: public/ protected/ private
+        
+
++ Ký tự BOM:    
+    + Khi sử dụng php: header => hay gặp lỗi => header already sent
+    + lưu file không có kí tự BOM
++ PHP thread:
+    + đi phỏng vấn: hay được hỏi
+    + php phân thành các luồng
+    + Mỗi request là 1 luồng
+    + Các request được xử lý riêng biệt => không liên quan tới nhau
+    + Mỗi luồng (thread) có :
+        + execute time: thời gian xử lý => nếu quá thời gian thì báo lỗi
+        + Dung lượng bộ nhớ nhất định: khi code => bộ nhớ khoong được vươt quá dung lương cho phép của mỗi thread
+        + Phải cấu hình +> dung lượng => hợp lý
+    + khi code php => không lo chết toàn bộ sever
+    + 
+
++ Nodejs
+    + xử lý trên 1 thread => 1 luồng
+
++ Biến trong php
+    + Biến tự khai báo:
+    + Biến môi trường: là array()
+        + tự nó có
+        + $_SERVER
+        + $_GET => là tham số được lấy từ địa chỉ url
+        + $_POT => là tham số được lấy từ form
+        + $_SESSION
+        + $_COOKIE
+        + $REQUEST
++ các thao tác xử lý biến:
+    + tham chiếu và tham trị:
+        + tất cả đều là tham trị => assign by value
+    + string:   
+        + explode: tách chuỗi 
+        + implode: gộp chuỗi
+        + strlen(): lấy ra độ dài chuỗi
+        + substr(chuỗi, start, length): cắt chuỗi
+
+    + array:
+        + count: đếm số phần tử trong mảng
+        + mảng có thể có key hoặc không có
+        + array_filter(array, function(){}) => lấy phần tử theo lựa chọn
+        + array_reduce => ddesms các phần tử bên trong
+        + array_map -> chỉnh sửa các kí tự bên trong mảng
+        + array shift -> xóa phần tử đầu
+        + array_unshift => thêm phần từ vào đầu
+        + array_pop => xóa phần tử cuối
+        + array_slice => trích xuất 1 số phần tử của mảng từ bắt đầu tới kết thúc
+        + array splice => 
