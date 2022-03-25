@@ -1,9 +1,10 @@
 <?php
-    $number = [1, 4, 6, 7, 9];
-
-    $number= array_pop($number);
-
-    echo "xin chao <br> halskdjf";
-
-    print_r($number);
+    $array = [
+        'name' => "Hung",
+        'age' => 30,
+        'name' => 'Toan',
+        'name' => 'Duc'
+    ];
+    // print_r(array_unique($array));
+    print_r(array_keys($array));
 ?>

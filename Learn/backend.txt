@@ -70,11 +70,22 @@
     + array:
         + count: đếm số phần tử trong mảng
         + mảng có thể có key hoặc không có
-        + array_filter(array, function(){}) => lấy phần tử theo lựa chọn
-        + array_reduce => ddesms các phần tử bên trong
-        + array_map -> chỉnh sửa các kí tự bên trong mảng
-        + array shift -> xóa phần tử đầu
-        + array_unshift => thêm phần từ vào đầu
-        + array_pop => xóa phần tử cuối
-        + array_slice => trích xuất 1 số phần tử của mảng từ bắt đầu tới kết thúc
-        + array splice => 
+        + array_filter:(array, function(){}) => lấy phần tử theo lựa chọn
+        + array_reduce: => ddesms các phần tử bên trong
+        + array_map: -> chỉnh sửa các kí tự bên trong mảng
+        + array shift: -> xóa phần tử đầu
+        + array_unshift: => thêm phần từ vào đầu
+        + array_pop: => xóa phần tử cuối
+        + array_slice: => trích xuất 1 số phần tử của mảng từ bắt đầu tới kết thúc; không làm thay đổi mảng gốc
+        + array splice: => trả về phần tử được xóa, làm thay đổi mảng gốc
+        + array_merge: trộn 2 hoặc nhiều mảng với nhau
+        + array_unique: 
+            + Loại bỏ các phần tử trùng nhau
+            + nếu không có key: unique giá trị 
+            + Nếu có key: theo key
+        + array_keys: trả về 1 mảng các key, key nào trùng sẽ lấy 1 key
+
+    + Loop array:
+
+    + function: 
+        + có thể đặt giá trị mặc định cho tham số
