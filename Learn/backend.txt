@@ -66,8 +66,20 @@
         + implode: gộp chuỗi
         + strlen(): lấy ra độ dài chuỗi
         + substr(chuỗi, start, length): cắt chuỗi
+        + trim(): xóa khoảng trắng ở đầu và cuối chuỗi
+        + ltrim(): xóa khoảng trắng ở đầu chuỗi
+        + rtrim(): xóa khoảng trắng ở cuối chuỗi
+        + strtolower(): viết thường toàn bộ chuỗi
+        + strtoupper(): viết hoa toàn bộ chuỗi
+        + ucfirst(): viết hoa chữ cái đầu tiên
+        + ucwords(): viết hoa chữ cái đầu của từng phần tử trong chuỗi
+        + str_replace($search, $replace, $subject): thay thế chuỗi
+        + 
 
-    + array:
++ array:
+    + có 2 cách tạo array
+    + $array = [];
+    + $array = array();
         + count: đếm số phần tử trong mảng
         + mảng có thể có key hoặc không có
         + array_filter:(array, function(){}) => lấy phần tử theo lựa chọn
@@ -76,6 +88,7 @@
         + array shift: -> xóa phần tử đầu
         + array_unshift: => thêm phần từ vào đầu
         + array_pop: => xóa phần tử cuối
+        + array_push(): thêm phần tử
         + array_slice: => trích xuất 1 số phần tử của mảng từ bắt đầu tới kết thúc; không làm thay đổi mảng gốc
         + array splice: => trả về phần tử được xóa, làm thay đổi mảng gốc
         + array_merge: trộn 2 hoặc nhiều mảng với nhau
@@ -86,6 +99,191 @@
         + array_keys: trả về 1 mảng các key, key nào trùng sẽ lấy 1 key
 
     + Loop array:
+        + fooreach($mảng as $biến_tạm){...}
+        + fooreach($mảng as $key => $biến_tạm)
 
     + function: 
         + có thể đặt giá trị mặc định cho tham số
+
+    return mixed
+
+*** object:
+    + object trong php bắt buộc phải khởi tạo từ 1 class
+    + stdClass(): là một class trong => không có gì bên trong
+    + standrad class: class chuẩn
+
++ thao tác xử lý mảng + chuỗi
+    + khi học 1 môn ngữ
+        + điểm khác biệt của nó
+
+
++ điểm khác biệt giữa $_GET và $_POST
+    + $_GET: lấy tham số từ URL
+        + sử dụng khi dữ liệu ngắn or text
+        + User có thể gửi link cho nhau
+        + Đọc dữ liệu ra
+
+    + $_POST: lấy tham số từ form
+        + dữ liệu nặng, upload file, bài viết dài...
+        + User không thể gửi link cho nhau
+        + thêm dữ liệu, sửa dữ liệu
+        + bảo mật
+
++ Biến mỗi trường: 
+    + $_GET
+    + $_POST
+    + $_REQUEST = tổng hợp của $_GET và $_POST
+    + $_SERVER: không sửa được => sever có gì thì nó lấy ra cái đó
+    + $_SESSION: 
+    + $_COOKIE: Giống như session => nằm trên trình duyệt
+        + lưu trên trình duyệt(client);
+    
+    + session và cookie đểu có thời gian sống, sau 1 khoảng thời gian sẽ bị xóa
+        + tính từ lúc truy cập lần cuối
+
+**** + SESSION: Khi chuyển trang => mọi thông tin bị quên lãng
+    + SESSION giải quyết vấn đề này
+    + SESSION là 1 biến mà tất cả các trang đều có thể truy cập
+    + Để sử dụng SESSION: bật SESSION lên: session_start();
+    + Có thể sử dụng ở tất cả các trang (cùng 1 tên miền);
+    + Cùng 1 server
+- SESSION phụ thuộc vào trình duyệt, user 
++ dùng làm phần đăng nhập
++ SESSION lưu ở trên server dưới dạng text file
++ Cấu hình: lưu session vào cơ sở dũ liệu, lưu vào redis...
+
++ SESSION và _COOKIE có lien hệ gì?
+    + cookie sẽ lưu session ID 
+    + session Id:
+        + id: indentification => định danh => tên riêng => phân biệt với cái khác
+    + nếu không có cookie => session sẽ bị quên
+    + Nếu như ai đó có cái session ID trên cookie => coi như có được session
+
++ khi đặt 1 biến session:
+    + tạo ra 1 file trên server để lưu trữ
+    + tạo ra 1 cookie trên trình duyệt để lưu tên của file trên server
+
+Khi đọc biến session:
+    + Trình duyệt gửi cookie lên server
+    + Server thấy cookie => có tên file => đọc file ra
+
++ hack: nếu ai đó mà có cookie thì coi như là chiếm được tài khoản 
+
+
+** + Cấu trúc dự án php:
+    + include, require
+    + include("file"): sao chép 1 đoạn code từ file khác sang
+    + require("file"): sao chép 1 đoạn code từ file khác sang
+
+    + sự khác nhau giữa require và include:
+        + require: sao chép file bắt buộc: nếu như file không tồn tại thì c trình sẽ dừng
+        + include: sao chép file không bắt buộc: 
+            + nếu như file không tồn tại thì chương trình sẽ bỏ qua và chạy đoạn code sau
+
+        + require hết
+        + require_once() => giống như require nhưng chỉ sao chép 1 lần
+        + include_once() => giống như include nhưng chỉ sao chép 1 lần
+        + file a.php require file b.php
+        + file b.php require file a.php
+
++ Kiểu dữ liệu trong php:
+    + php không bắt buộc khai báo kiểu dữ liệu => kiểu dữ liệu bị thay đổi
+    + kiểm tra kiểu dữ liệu:
+        + getType()L trả vè kiểu dữ liệu
+    + Ép kiểu: 
+        + có 2 cách ép kiểu
+            + viết kiểu ở phía trước vd: (int) $age;
+        + intval(): chuyển về integer
+
+    + Tham số của function:
+        + đặt kiểu của biến ở tham số => php 7
+
+    + Hằng số trong php:
+        + constant: hằng số 
+        + là một giá trị trong suốt toàn bộ chương trình => giá trị không thay đổi
+        + PI = 3.14
+        + php5: defin(TEN HANG SO, GIA TRI);
+
++ PHP header:
+    + Của web, không phải chỉ của php
+    + request: 
+        +yêu cầu gửi lên máy chủ
+        + Gồm 2 phần:
+            + header
+            + body
+    + respone: 
+        +kết quả trả về từ máy chủ
+        + Gồm 2 phần:
+            + header
+            + body
+
+    + Các thuộc tính thường dùng của header:
+        + Content-Type: 
+            + Báo hiệu cho trình duyệt biết server đang trả về nội dung là gì
+            + Trình duyệt sẽ biết để hiển thị
+            + text/html; charset=UTF-8
+            + image/jpg
+        + Access-control-allow-origin
+            + Viết js -> gửi ajax đến một tên miền khác => không được
+            + Nếu như server đó trả về * -> mọi js đều
+    
++ OOP: Lập trình hướng đối tượng
++ là cách lập trình thoe tư tưởng -> tạo ra các đối tượng và cho các đối tượng tương tác với nhau
+    
++ cách khai báo từ khóa class
+    + Từ khóa class:
+    + Class không phải là 1 biến
+    + tạo ra một thực thể từ class -> class mới có ý nghĩa
+    + constructor: 
+        + __construct() {}
+    + destructor
+        + __destruct() {}:
+            + Chạy khi thực thể bị hủy
+    + Thuộc tính: 
+        + property:
+    + Kế thừa: extends
+        + Gọi constructor của class cha:
+            + parent::__construct();
+    + Trong lập trình hướng đối tượng có 3 cấp độ truy cập:
+        + public: công khai => có thể lấy dữ liệu bất kì đâu
+        + private: bí mật -> chỉ có thể lấy trong class đó
+        + protected: bảo vệ
+    + Thuộc tính: bắt buộc phải có từ khóa chỉ mức độ truy cập:
+    + Hàm:
+        + nếu là hàm public thì không cần
+        + nếu là protected hoặc private thì cần từ khóa truy cập
+
+    + Sattic property và static function:
+        + static property: không thể sửa đổi
+        + là thuộc tính,hoặc hàm có thể lấy mà không cần khởi tạo đối tượng
+        + vd: [tên biến]::[biến static]; 
+    + singleton: 
+    + namespace: 
+        + Không gian tên
+        + Gói (package)
+        + Khi code nhiều lập trình viên cùng code với nhau
+        + Khi sử dụng thư viện
+    + Khi khởi tạo thực thể (instance):
+        + viết đầy đủ namespace vd: $tom = new thucthe1/thucthe2/.../class();
+        + Sử dụng từ khóa use 
+            + Giống import
+            + use...as... => sử dụng class với 1 cái tên khác
+
++ Abstract class:
+    + Overide: Ghi đè
+        + viết tên hàm giống nhau thì sẽ bị ghi đè
+    + Abstract class: 
+        + được sử dụng khi thiết kế hệ thống
+        + là class cơ sở
+        + quan trọng nhất
+        + thường được viết bởi lập trình viên có kinh nghiệm
+        + Tạo abstract class:
+            + Abstract phía trước từ khóa
+        + Có thể định nghĩa các abstract function
+        + abstract function -> là các hàm rỗng
+        + bắt buộc các class phải có
+        + Abstract là class cơ bản của 1 đối tượng
+++ Interface:
+    + Được sử dụng rất nhiều
+    + là những tính năng riêng lẻ, có thẻ sử dụng cho nhiều class
+
