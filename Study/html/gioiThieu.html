@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/gioithieu.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/homepage.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='../css/slideShow.css'> -->
+    <script src='/js/main.js'></script>
+</head>
+<body>
+    <header class="header">
+        <div id="menu-the-loai" class="menu-the-loai" >
+
+            <button id="dong-menu" onclick="dongMenu()">×</button>
+
+            <div id = 'the-loai'>
+                <ul>
+                    <li><a href="index.html" class="link-the-loai">Trang chu</a></li>
+                    <li><a href="gioiThieu.html" class="link-the-loai">Gioi Thieu</a></li>
+                    <li><a href="sanPham.html"" class="link-the-loai">San Pham</a></li>
+                    <li><a href="dangKy.html" class="link-the-loai">Dang Ky</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="align-items: center;">
+            <button id="mo-menu" onclick="moMenu()">&#9776;</button>
+            <a id = "logo" href="#" style="text-decoration:none;"><h1>Sach Hay</h1></a>
+        </div>
+        
+        <input id="thanh-tim-kiem"  type="text" placeholder="Tim Kiem...">
+        
+        <div id="dang-nhap-dang-ky">
+            <a class = 'link' href="/Hentai-Heaven/html/logIn.html" target="_blank">Login</a>
+            <a class = 'link' href="/html/dangKy.html">Sign up</a>
+        </div>
+
+    </header>
+
+    <div id = 'menu'>
+        <ul>
+            <li><a href="index.html">Trang chu</a></li>
+            <li><a href="gioithieu.html">Gioi Thieu</a></li>
+            <li><a href="sanpham.html">San Pham</a></li>
+            <!-- <li><a href="dangKy.html">Dang Ky</a></li> -->
+        </ul>
+    </div>
+    <div id = 'content'>
+       
+        <div>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="/img/1.jpg" style="width: 1000px;height: 100%;">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="/img/2.jpg" style="width:1000px;height: 100%;">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="/img/3.jpg" style="width:1000px;height: 100%;">
+                  <div class="text">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+                
+        </div>
+    </div>
+    <div id = 'footer'>Footer</div>
+</body>
+</html>
